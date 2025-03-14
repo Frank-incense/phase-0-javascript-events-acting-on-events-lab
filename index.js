@@ -11,13 +11,9 @@ function moveDodgerLeft() {
     }
 }
 function moveDodgerRight() {
-    const screen = document.getElementById("game");
-    const leftNumbers = dodger.style.left.replace("px","");
-    const width  = dodger.offsetWidth;
-    const left = parseInt(leftNumbers, 10);
-    const right = screen.offsetWidth - width;
+    const left = parseInt(dodger.style.left, 10);
     
-    if (right > left) {
+    if (360 > left) {
         dodger.style.left = `${left + 1}px`;
     }
 }
